@@ -1,0 +1,15 @@
+on: 
+  pull_request:
+    types: [ opened, labeled, unlabeled ]
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Invoke workflow in another repo with inputs
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: Dispatch
+          repo: dummyorg42/dummy4
+          token: ${{ secrets.TOKEN }}
+          inputs: '{ "message": "blah blah", "debug": true }'
