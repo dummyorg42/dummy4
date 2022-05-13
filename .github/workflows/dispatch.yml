@@ -11,5 +11,5 @@ jobs:
         with:
           workflow: Dispatch
           repo: dummyorg42/dummy4
-          token: abc
+          token: ${{ secrets.PERSONAL_TOKEN }}
           inputs: '{ "message": "blah blah", "debug": true }'
