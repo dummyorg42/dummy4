@@ -2,7 +2,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  dispatch:
+  dispatched:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Dispatched!"
